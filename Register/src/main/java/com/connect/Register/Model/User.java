@@ -1,5 +1,6 @@
 package com.connect.Register.Model;
 
+import io.swagger.annotations.ApiParam;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -9,15 +10,19 @@ import jakarta.persistence.Table;
 @Table(name="USER_REG_TBL", schema = "Angboot")
 public class User {
 
+    @ApiParam(name = "Name", value = "name")
     @Column(name="NAME")
     private String name;
     @Id
+    @ApiParam(name = "Email", value = "email")
     @Column(name="EMAIL")
     private String email;
 
+    @ApiParam(name = "Query", value = "query")
     @Column(name="QUERY")
     private String query;
 
+    @ApiParam(name = "Mobile Number", value = "mobileNumber")
     @Column(name="MOBILE_NUMBER")
     private int mobileNumber;
 
